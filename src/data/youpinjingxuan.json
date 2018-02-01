@@ -1,0 +1,91 @@
+{
+    "errno": 0,
+    "errmsg": "OK",
+    "result": [
+        {
+            "product_id": "2319011139416064",
+            "model_name": "X9 plus",
+            "brand_id": "21",
+            "brand_name": "vivo",
+            "price": 1988,
+            "com_price": "3498",
+            "model_id": "773",
+            "mer_id": "8",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t01285982d4b50c76f7.jpg",
+                "big": "http://p0.qhmsg.com/t01efd104acfb105142.jpg",
+                "mid": "http://p0.qhmsg.com/t01beccb6a99caa484d.jpg",
+                "min": "http://p0.qhmsg.com/t0137cbb7dc7f62abe1.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2319016874930176",
+            "model_name": "iPhone 6",
+            "brand_id": "2",
+            "brand_name": "苹果",
+            "price": 1458,
+            "com_price": "5288",
+            "model_id": "97",
+            "mer_id": "8",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t01762cb36857b02e3e.jpg",
+                "big": "http://p0.qhmsg.com/t01eb92faa3242cdc9e.jpg",
+                "mid": "http://p0.qhmsg.com/t01404a03ccf262cad8.jpg",
+                "min": "http://p0.qhmsg.com/t01315fdf20806ab408.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2318985902693376",
+            "model_name": "iPhone 5S",
+            "brand_id": "2",
+            "brand_name": "苹果",
+            "price": 708,
+            "com_price": "2288",
+            "model_id": "5",
+            "mer_id": "8",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t01389d5229dc2e6d74.jpg",
+                "big": "http://p0.qhmsg.com/t018484836591acdbdb.jpg",
+                "mid": "http://p0.qhmsg.com/t0188662d9f0a9ac8f4.jpg",
+                "min": "http://p0.qhmsg.com/t018f72b6967f35c54c.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2319001537126400",
+            "model_name": "iPhone 5S",
+            "brand_id": "2",
+            "brand_name": "苹果",
+            "price": 788,
+            "com_price": "2288",
+            "model_id": "5",
+            "mer_id": "8",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t01389d5229dc2e6d74.jpg",
+                "big": "http://p0.qhmsg.com/t018484836591acdbdb.jpg",
+                "mid": "http://p0.qhmsg.com/t0188662d9f0a9ac8f4.jpg",
+                "min": "http://p0.qhmsg.com/t018f72b6967f35c54c.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2318456161426432",
+            "model_name": "iPad Mini",
+            "brand_id": "2",
+            "brand_name": "苹果",
+            "price": 1099,
+            "com_price": "1798",
+            "model_id": "15",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t01bdd2a74635ba276d.jpg",
+                "big": "http://p0.qhmsg.com/t01639152d071e9d544.jpg",
+                "mid": "http://p0.qhmsg.com/t01230085d389eebec3.jpg",
+                "min": "http://p0.qhmsg.com/t01d1bf26295e20def5.jpg"
+            },
+            "mer_name": ""
+        }
+    ]
+}
