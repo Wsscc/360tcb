@@ -1,1 +1,67 @@
-div{color:#1875e7}
+/*全局*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*顶部*/
+header{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #C7C7C7;
+	background: #F7F7F7;
+	display: flex;
+	justify-content: space-around;
+	padding: 5px 0 5px 0;
+	align-items: center;
+}
+header .left{
+	display: flex;
+}
+header .left ul{
+	display: flex;
+	border-right: 1px solid gainsboro;
+	padding-right: 10px;
+}
+header .left ul li:nth-child(1){
+	color: #42A975;
+}
+header .left ul li:nth-child(2) a{
+	color: #666666;
+	font-size: 14px;
+	margin-left: 10px;
+	text-decoration: none;
+}
+header .left ul li:nth-child(2) a:hover{
+	text-decoration: underline;
+}
+header .left .index{
+	color: #666666;
+	margin-left: 15px;
+	font-size: 14px;
+	text-decoration: none;
+}
+header .left .index:hover{
+	text-decoration: underline;
+}
+header .right ul{
+	display: flex;
+}
+header .right ul li{
+	padding: 0 10px 0 10px;
+	font-size: 14px;
+	border-right: 1px solid gainsboro;
+}
+header .right ul .end{
+	border: none;
+}
+header .right ul li a{
+	color: #666666;
+	text-decoration: none;
+}
+header .right ul .end a{
+	color: red;
+}
+header .right ul a:hover{
+	text-decoration: underline;
+}
