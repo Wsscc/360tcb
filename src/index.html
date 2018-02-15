@@ -1,31 +1,141 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>360同城帮</title>
-		<link rel="stylesheet" type="text/css" href="scss/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" type="text/css" href="scss/index.css" />
 	</head>
+
 	<body>
 		<!--顶部-->
 		<header>
 			<div class="left">
 				<ul>
 					<li>邯郸</li>
-					<li><a href="#">[切换城市]</a></li>
+					<li>
+						<a href="#" onclick="gitCity()">[切换城市]</a>
+					</li>
 				</ul>
 				<a href="#" class="index">同城帮首页</a>
 			</div>
 			<div class="right">
 				<ul>
-					<li><a href="#">登录</a></li>
-					<li><a href="#">注册</a></li>
-					<li><a href="#">我的订单</a></li>
-					<li><a href="#">在线客服</a>（9:00-21：00）</li>
-					<li><a href="#">客户服务</a></li>
-					<li><a href="#">论坛</a></li>
-					<li class="end"><a href="#">投诉建议</a></li>
+					<li>
+						<a href="#">登录</a>
+					</li>
+					<li>
+						<a href="#">注册</a>
+					</li>
+					<li>
+						<a href="#">我的订单</a>
+					</li>
+					<li>
+						<a href="#">在线客服</a>（9:00-21：00）</li>
+					<li>
+						<a href="#">客户服务</a>
+					</li>
+					<li>
+						<a href="#">论坛</a>
+					</li>
+					<li class="end">
+						<a href="#">投诉建议</a>
+					</li>
 				</ul>
 			</div>
 		</header>
+		<!--城市列表部分-->
+		<div id="city">
+			<div id="close">
+				<span>城市列表</span>
+				<button id="GB">关闭×</button>
+			</div>
+			<div id="cityin">
+				<div id="hot">
+					<span>热门</span>
+					<ul id="hotCity">
+					</ul>
+				</div>
+				<div id="list">
+					<span>拼音</span>
+					<div>
+						<ul id="citylistTop">
+							<li>
+								<a href="#"></a>
+							</li>
+						</ul>
+						<ul id="citylistB">
+							<li>
+								<a href="#"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--log及导航-->
+		<div id="log">
+			<div>
+				<img src="img/4.png" />
+			</div>
+			<ul>
+				<li>
+					<a href="#">二手优品</a>
+				</li>
+				<li>
+					<a href="#">手机回收</a>
+				</li>
+				<li>
+					<a href="#">手机维修</a>
+				</li>
+				<li>
+					<a href="#">电脑维修</a>
+				</li>
+				<li>
+					<a href="#">以旧换新</a>
+				</li>
+				<li>
+					<a href="#">手机租用</a>
+				</li>
+			</ul>
+		</div>
+		<!--轮播图部分-->
+		
 	</body>
+	<script src="js/baiduTemplate.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/html" id="hotCityIn">
+
+		<%for(var i=0;i<hotCity.length;i++){%>
+		<li>
+			<a href="#">
+				<%=hotCity[i].name%>
+			</a>
+		</li>
+		<%}%>
+	</script>
+	<script type="text/html" id="templist">
+
+		<%for(var k in obj){%>
+		<li>
+			<a href="#" onclick="changeCity('<%=k%>')">
+				<%=k%>
+			</a>
+		</li>
+		<%}%>
+	</script>
+	<script type="text/html" id="tempCity">
+
+		<%for(var i=0;i<city.length;i++){%>
+		<li>
+			<a href="#">
+				<%=city[i].name%>
+			</a>
+		</li>
+		<%}%>
+	</script>
+	<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
 </html>
