@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="http://localhost:8080/scss/shupOn.css"/>
+	</head>
+	<body>
+		<!--顶部-->
+		<header>
+			<div id="headBox">
+				<div class="left">
+					<ul>
+						<li>邯郸</li>
+						<li>
+							<a href="#" onclick="gitCity()">[切换城市]</a>
+						</li>
+					</ul>
+					<a href="#" class="index">同城帮首页</a>
+				</div>
+				<div class="right">
+					<ul>
+						<li>
+							<a href="#">登录</a>
+						</li>
+						<li>
+							<a href="#">注册</a>
+						</li>
+						<li>
+							<a href="#">我的订单</a>
+						</li>
+						<li>
+							<a href="#">在线客服</a>（9:00-21：00）</li>
+						<li>
+							<a href="#">客户服务</a>
+						</li>
+						<li>
+							<a href="#">论坛</a>
+						</li>
+						<li class="end">
+							<a href="#">投诉建议</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div id="city">
+			<div id="close">
+				<span>城市列表</span>
+				<button id="GB">关闭×</button>
+			</div>
+			<div id="cityin">
+				<div id="hot">
+					<span>热门</span>
+					<ul id="hotCity">
+					</ul>
+				</div>
+				<div id="list">
+					<span>拼音</span>
+					<div>
+						<ul id="citylistTop">
+							<li>
+								<a href="#"></a>
+							</li>
+						</ul>
+						<ul id="citylistB">
+							<li>
+								<a href="#"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--log-->
+		<div id="logBox">
+			<div id="log">
+				<div id="logleft">
+					<img src="http://localhost:8080/img/t018923cd666517b496.png"/>
+				</div>
+				<div id="logright">
+					<ul>
+						<li>全部</li>
+						<li>台式机</li>
+						<li>笔记本</li>
+						<li>手机平板</li>
+						<li>办公设备</li>
+						<li>服务器</li>
+					</ul>
+					<div>
+						<input type="text" name="" id="" value="" placeholder="请输入您的电脑/手机问题，为您找到最优质的维修商"/>
+						<button>搜索</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--店铺信息-->
+		<div id="shop">
+			<div id="shopl">
+				<div id="imgs">
+					<img src="http://localhost:8080/img/1.png"/>
+				</div>
+				<div id="shup">
+					<h3>联金诚维修中心 </h3>
+					<div class="sizi12">联系人：<span>王鑫</span></div>
+					<div class="sizi12">电话：<span id="red">555454</span></div>
+					<div class="sizi12">商家地址：<span>北京西城区西直门内大街前桃园胡同1号楼4门底商</span></div>
+				</div>
+			</div>
+			<div id="shopr">
+				<div>店铺等级：<span>💎💎💎💎💎</span></div>
+				<span>最近成交：<span id="green">165156</span>次&nbsp;&nbsp;&nbsp;评价：<span>489686</span>条</span>
+				<span>营业时间： 08:00-22:00    周末正常营业</span>
+			</div>
+		</div>
+	</body>
+	<script src="http://localhost:8080/js/baiduTemplate.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/html" id="hotCityIn">
+
+		<%for(var i=0;i<hotCity.length;i++){%>
+		<li>
+			<a href="#">
+				<%=hotCity[i].name%>
+			</a>
+		</li>
+		<%}%>
+	</script>
+	<script type="text/html" id="templist">
+
+		<%for(var k in obj){%>
+		<li>
+			<a href="#" onclick="changeCity('<%=k%>')">
+				<%=k%>
+			</a>
+		</li>
+		<%}%>
+	</script>
+	<script type="text/html" id="tempCity">
+
+		<%for(var i=0;i<city.length;i++){%>
+		<li>
+			<a href="#">
+				<%=city[i].name%>
+			</a>
+		</li>
+		<%}%>
+	</script>
+	<script type="text/html" id="tempshop">
+
+		<div id="shopl">
+				<div id="imgs">
+					<img src="<%=obj.shop_ico%>"/>
+				</div>
+				<div id="shup">
+					<h3><%=obj.shop_name%></h3>
+					<div class="sizi12">联系人：<span><%=obj.shop_name%></span></div>
+					<div class="sizi12">电话：<span id="red"><%=obj.mobile%></span></div>
+					<div class="sizi12">商家地址：<span><%=obj.addr_detail%></span></div>
+				</div>
+			</div>
+			<div id="shopr">
+				<div>店铺等级：<span>💎💎💎💎💎</span></div>
+				<span>最近成交：<span id="green"><%=obj.order_count%></span>次&nbsp;&nbsp;&nbsp;评价：<span><%=obj.shop_visit%></span>条</span>
+				<span>营业时间： 08:00-22:00    周末正常营业</span>
+			</div>
+	</script>
+	
+	<script src="http://localhost:8080/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//城市列表关闭事件
+		$("#GB").click(function(){
+			$("#city").css("display","none");
+		})
+		//点击切换城市按钮事件
+		var hotCity;
+		var cityList;
+		function gitCity(){
+			$("#city").css("display","block");
+			$.get("http://localhost:8080/data/city.json",function(res){
+				var cityObj = res.result;
+				hotCity = cityObj.hotcity;
+				cityList = cityObj.citylist;
+				$("#hotCity").html(baidu.template("hotCityIn",{hotCity:hotCity}))
+				$("#citylistTop").html(baidu.template("templist",{obj:cityList}))
+					changeCity("A")
+			})
+		}
+		function changeCity(key){
+			var city = cityList[key];
+			$("#citylistB").html(baidu.template("tempCity",{city:city}));
+		}
+		
+		
+		var str=window.location.pathname;
+		var id = str.slice(16);
+		$.get("http://localhost:8080/shupOn",{id:id},function(res){
+			var obj = res;
+			$("#shop").html(baidu.template("tempshop",{obj:obj}))
+		})
+	</script>
+</html>

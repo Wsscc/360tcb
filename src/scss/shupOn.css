@@ -1,0 +1,254 @@
+/*全局*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*顶部*/
+header{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #C7C7C7;
+	background: #F7F7F7;
+}
+header #headBox{
+	width: 960px;
+	height: 30px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+header .left{
+	display: flex;
+}
+header .left ul{
+	display: flex;
+	border-right: 1px solid gainsboro;
+	padding-right: 10px;
+}
+header .left ul li:nth-child(1){
+	color: #42A975;
+}
+header .left ul li:nth-child(2) a{
+	color: #666666;
+	font-size: 14px;
+	margin-left: 10px;
+	text-decoration: none;
+}
+header .left ul li:nth-child(2) a:hover{
+	text-decoration: underline;
+}
+header .left .index{
+	color: #666666;
+	margin-left: 15px;
+	font-size: 14px;
+	text-decoration: none;
+}
+header .left .index:hover{
+	text-decoration: underline;
+}
+header .right ul{
+	display: flex;
+}
+header .right ul li{
+	padding: 0 10px 0 10px;
+	font-size: 14px;
+	border-right: 1px solid gainsboro;
+}
+header .right ul .end{
+	border: none;
+}
+header .right ul li a{
+	color: #666666;
+	text-decoration: none;
+}
+header .right ul .end a{
+	color: red;
+}
+header .right ul a:hover{
+	text-decoration: underline;
+}
+	/*城市列表部分*/
+#city{
+	width: 450px;
+	height: 170px;
+	padding: 10px;
+	border: 1px solid #C7C7C7;;
+	background: #F7F7F7;
+	position: absolute;
+	top: 33px;
+	left: 350px;
+	display: none;
+	z-index: 10;
+}
+#city #close{
+	display: flex;
+	justify-content: space-between;
+}
+#city #close button{
+	width: 60px;
+}
+#city #cityin{
+	width: 100%;
+	height: 80%;
+	background: white;
+	border: 1px solid #C7C7C7;
+	margin-top: 10px;
+}
+#city #cityin #hot{
+	width: 100%;
+	height: 40%;
+	/*background: palegreen;*/
+	display: flex;
+}
+#city #cityin #list{
+	width: 100%;
+	height: 60%;
+	/*background: palegreen;*/
+	display: flex;
+}
+#city #cityin #hot span,#city #cityin #list span{
+	width: 45px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#city #cityin #hot ul{
+	width: 80%;
+	height: 100%;
+}
+#city #cityin #hot ul li{
+	float: left;
+	padding: 5px 8px;
+	font-size: 12px;
+}
+#city #cityin #hot ul li a{
+	color: black;
+	text-decoration: none;
+}
+#city #cityin #hot ul li a:hover{
+	color: red;
+	text-decoration: underline;
+}
+#citylistTop li,#citylistB li{
+	float: left;
+	padding: 3px 5px;
+	font-size: 10px;
+}
+#citylistTop li a,#citylistB li a{
+	color: black;
+	text-decoration: none;
+}
+#citylistTop li a:hover,#citylistB li a:hover{
+	color: red;
+	text-decoration: underline;
+}
+/*log*/
+#logBox{
+	width: 100%;
+	height: 100px;
+	border-bottom: 3px solid #4BAC20;
+}
+#logBox #log{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	background-image: url(../img/t01822c104e5c48db32.png);
+	display: flex;
+	justify-content: space-between;
+}
+#logleft{
+	width:250px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+#logright{
+	width: 666px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#logright ul{
+	display: flex;
+	padding-bottom: 10px;
+}
+#logright ul li{
+	padding: 2px 10px;
+	font-size: 14px;
+	margin-right: 5px;
+}
+#logright input{
+	width: 490px;
+	height: 30px;
+	border: 2px solid #4BAC20;
+	float: left;
+}
+#logright button{
+	width: 75px;
+	height: 34px;
+	border: 2px solid #4BAC20;
+	color: white;
+	background: #4BAC20;
+	font-size: 18px;
+}
+/*店铺信息*/
+#shop{
+	width: 960px;
+	height: 163px;
+	border: 1px solid #E9F0F5;
+	margin: 8px auto;
+	background-image: url(../img/t01a1211a9e1859c837.png);
+	background-position-x: -30px;
+	background-position-y: 607px;
+	background-size: 150% 500%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 20px;
+}
+#shopl{
+	width: 520px;
+	height: 120px;
+	display: flex;
+	justify-content: space-between;
+}
+#shopl #imgs{
+	width: 120px;
+	height: 120px;
+}
+#shopl #imgs img{
+	width:120px;
+	height: 100%;
+}
+#shopl #shup{
+	width: 350px;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+#shopl #shup .sizi12{
+	font-size: 12px;
+}
+#shopr{
+	width: 250px;
+	height: 120px;
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+#red{
+	color: red;
+}
+#green{
+	color: green;
+	font-weight: 800;
+}
